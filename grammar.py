@@ -90,7 +90,7 @@ class Rule(Serialize):
         self.order = order
         self.options = options or RuleOptions()
         self._hash = hash((self.origin, tuple(self.expansion)))
-        print("grammar.py, rule, init, origin: " + str(origin))
+        print("grammar.py, rule, init, origin: " + str(origin) + " #" + str(order))
 
     def _deserialize(self):
         self._hash = hash((self.origin, tuple(self.expansion)))

@@ -287,7 +287,7 @@ class SimplifyRule_Visitor(Visitor):
         self._flatten(tree)
         # Ensure all children are unique
         if len(set(tree.children)) != len(tree.children):
-            print("tree children: " + len(tree.children))
+            print(str(tree.data) + " tree children: " + str(len(tree.children)))
             tree.children = dedup_list(tree.children)   # dedup is expensive, so try to minimize its use
 
 
